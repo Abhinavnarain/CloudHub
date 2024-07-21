@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Cloud Security</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        header {
+            background-color: #00bfae;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #00bfae;
+        }
+        .section img {
+            max-width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .section img:hover {
+            transform: scale(1.05);
+        }
+        .section p {
+            line-height: 1.8;
+        }
+        .diagram, .flowchart {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .diagram img, .flowchart img {
+            max-width: 80%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .diagram img:hover, .flowchart img:hover {
+            transform: scale(1.05);
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #00bfae;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; 
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #00bfae transparent transparent transparent;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .graphical-image {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .graphical-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .graphical-image img:hover {
+            transform: scale(1.05);
+        }
+        .interactive {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .interactive button {
+            background-color: #00bfae;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .interactive button:hover {
+            background-color: #008d8a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Introduction to Cloud Security</h1>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>What is Cloud Security?</h2>
+            <img src="https://www.ncsc.gov.uk/images/iStock-466094364.jpg" alt="Cloud Security Overview">
+            <p>Cloud security encompasses the technologies, policies, and controls designed to protect data, applications, and services in the cloud. It includes measures to secure cloud environments, ensure data privacy, and protect against unauthorized access and cyber threats.</p>
+        </div>
+        <div class="section">
+            <h2>Theoretical Concepts</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTobEdxXs2-F-sNMIkiVgzUtlR06vQoO15YHruCpR8EKGMLZWdmFzKUTzSxgJVnQ833nI&usqp=CAU" alt="Cloud Security Theory">
+            <p>Key concepts in cloud security include:</p>
+            <ul>
+                <li><strong>Identity and Access Management (IAM):</strong> Controls who can access cloud resources and what actions they can perform.</li>
+                <li><strong>Data Encryption:</strong> Protects data in transit and at rest using encryption algorithms.</li>
+                <li><strong>Security Policies:</strong> Defines rules and procedures for managing and securing cloud environments.</li>
+                <li><strong>Compliance:</strong> Ensures adherence to legal and regulatory standards for data protection.</li>
+                <li><strong>Incident Response:</strong> Processes for detecting, managing, and mitigating security incidents.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Cloud Security Architecture</h2>
+            <div class="graphical-image">
+                <img src="https://i0.wp.com/cloudwithease.com/wp-content/uploads/2023/10/Cloud-Security-Architecture.jpg" alt="Cloud Security Architecture">
+            </div>
+            <p>Cloud security architecture includes various layers and components, such as network security, application security, and data security. The architecture is designed to provide a comprehensive security framework for cloud environments.</p>
+        </div>
+        <div class="section">
+            <h2>Security Models and Standards</h2>
+            <img src="data:image/png;base64,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" alt="Cloud Security Models">
+            <p>Different security models and standards are used to ensure cloud security:</p>
+            <ul>
+                <li><strong>Shared Responsibility Model:</strong> Defines the division of security responsibilities between cloud providers and customers.</li>
+                <li><strong>ISO/IEC 27001:</strong> An international standard for information security management systems.</li>
+                <li><strong>Cloud Security Alliance (CSA) Controls:</strong> Guidelines and best practices for securing cloud environments.</li>
+                <li><strong>NIST Cybersecurity Framework:</strong> A framework for managing and mitigating cybersecurity risks.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Cloud Security Challenges</h2>
+            <div class="flowchart">
+                <img src="data:image/jpeg;base64,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" alt="Cloud Security Challenges">
+            </div>
+            <p>Cloud security faces several challenges including:</p>
+            <ul>
+                <li><strong>Data Breaches:</strong> Unauthorized access to sensitive data stored in the cloud.</li>
+                <li><strong>Misconfiguration:</strong> Incorrectly set up cloud resources that expose vulnerabilities.</li>
+                <li><strong>Insider Threats:</strong> Risks posed by employees or contractors with access to cloud resources.</li>
+                <li><strong>Compliance Issues:</strong> Challenges in meeting regulatory requirements for data protection.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Case Study: Securing Financial Data</h2>
+            <img src="https://example.com/cloud-security-case-study.jpg" alt="Cloud Security Case Study">
+            <p>A financial institution uses cloud security best practices to protect customer data. By implementing strong encryption, IAM policies, and regular security audits, the institution ensures the confidentiality and integrity of financial transactions and customer information.</p>
+        </div>
+        <div class="section interactive">
+            <h2>Interactive Example</h2>
+            <button onclick="showAlert()">Click me to learn more</button>
+        </div>
+    </div>
+    <script>
+        function showAlert() {
+            alert("Cloud Security involves various practices and technologies to protect data and applications in the cloud, addressing challenges like data breaches, misconfigurations, and compliance issues.");
+        }
+    </script>
+</body>
+</html>

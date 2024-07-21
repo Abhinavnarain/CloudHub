@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtualization in Cloud Computing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .content-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .diagram img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .service {
+            background: #e7eaf3;
+            border-radius: 50%;
+            padding: 20px;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service:hover {
+            transform: scale(1.1);
+        }
+
+        .icon {
+            font-size: 2em;
+            background: #3498db;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 0.9em;
+            line-height: 1.5em;
+        }
+
+        .more-info {
+            text-align: left;
+        }
+
+        .more-info h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #2c3e50;
+        }
+
+        .more-info p {
+            margin: 10px 0;
+        }
+
+        .more-info ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .diagrams {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .diagrams .diagram {
+            flex: 1;
+            max-width: 48%;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Virtualization in Cloud Computing</h1>
+        <div class="content-box">
+            <div class="services">
+                <div class="service">
+                    <div class="icon">H</div>
+                    <h2>Hypervisor</h2>
+                    <p>A software layer that enables multiple operating systems to run concurrently on a host machine.</p>
+                </div>
+                <div class="service">
+                    <div class="icon">VM</div>
+                    <h2>Virtual Machines</h2>
+                    <p>Emulated computers created by virtualization, each running its own operating system and applications.</p>
+                </div>
+                <div class="service">
+                    <div class="icon">VN</div>
+                    <h2>Virtual Network</h2>
+                    <p>Abstracted network resources providing connectivity between VMs and other virtualized services.</p>
+                </div>
+                <div class="service">
+                    <div class="icon">VS</div>
+                    <h2>Virtual Storage</h2>
+                    <p>Storage resources abstracted from physical hardware to provide scalable and flexible storage solutions.</p>
+                </div>
+            </div>
+        </div>
+        <div class="content-box more-info">
+            <h2>Theories and Core Topics</h2>
+            <h2>Theory of Virtualization</h2>
+            <p><strong>Virtualization</strong> involves creating virtual versions of physical components. By abstracting physical resources, virtualization allows for the creation of multiple simulated environments from a single physical hardware system. This process is managed by a hypervisor, which separates the physical resources from the virtual environments.</p>
+
+            <h2>Types of Virtualization</h2>
+            <ul>
+                <li><strong>Server Virtualization:</strong> Partitioning a physical server into smaller virtual servers.</li>
+                <li><strong>Storage Virtualization:</strong> Pooling physical storage from multiple devices to appear as a single storage device.</li>
+                <li><strong>Network Virtualization:</strong> Combining network resources by splitting the available bandwidth into independent channels.</li>
+                <li><strong>Desktop Virtualization:</strong> Running a desktop operating system in a virtual machine on a central server.</li>
+                <li><strong>Application Virtualization:</strong> Running applications in an isolated runtime environment.</li>
+            </ul>
+
+            <h2>Key Benefits of Virtualization</h2>
+            <ul>
+                <li><strong>Cost Efficiency:</strong> Reduces hardware costs by running multiple virtual environments on a single physical system.</li>
+                <li><strong>Scalability:</strong> Easily scalable to meet increasing workload demands.</li>
+                <li><strong>Disaster Recovery:</strong> Simplifies backup and recovery processes.</li>
+                <li><strong>Isolation:</strong> Provides isolated environments to run different applications, enhancing security and stability.</li>
+                <li><strong>Resource Optimization:</strong> Optimizes the use of physical resources, improving overall system efficiency.</li>
+            </ul>
+
+            <h2>Examples of Virtualization in Cloud Computing</h2>
+            <p>Virtualization is widely used in cloud computing to provide various services:</p>
+            <ul>
+                <li><strong>Amazon Web Services (AWS):</strong> Uses virtualization to provide scalable computing resources through its EC2 instances.</li>
+                <li><strong>Microsoft Azure:</strong> Offers virtual machines and virtual networks to support a wide range of applications.</li>
+                <li><strong>Google Cloud Platform (GCP):</strong> Utilizes virtualization for its Compute Engine to deliver flexible computing power.</li>
+            </ul>
+            <div class="diagrams">
+                <div class="diagram">
+                    <img src="https://miro.medium.com/v2/resize:fit:561/1*R_PQR6OefLcNp6WADuYU-w.png" alt="Virtualization Diagram">
+                </div>
+                <div class="diagram">
+                    <img src="https://media.licdn.com/dms/image/C5612AQE_EM6mJAGMkQ/article-inline_image-shrink_400_744/0/1585485732867?e=1724889600&v=beta&t=_1D1sheCwAjNJ75o_j-CCsqwGeB0XyDmeNPFFlmpi7A" alt="Virtualization Diagram">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

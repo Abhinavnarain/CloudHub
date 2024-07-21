@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to IaaS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        header {
+            background-color: #1e88e5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #1e88e5;
+        }
+        .section img {
+            max-width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .section img:hover {
+            transform: scale(1.05);
+        }
+        .section p {
+            line-height: 1.8;
+        }
+        .diagram {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .diagram img {
+            max-width: 80%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .diagram img:hover {
+            transform: scale(1.05);
+        }
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #1e88e5;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .container-timeline {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .container-timeline::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #1e88e5;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid #1e88e5;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #1e88e5;
+        }
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid #1e88e5;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #1e88e5 transparent transparent;
+        }
+        .right::after {
+            left: -16px;
+        }
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #1e88e5;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; 
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #1e88e5 transparent transparent transparent;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .flowchart {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .flowchart img {
+            max-width: 90%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .flowchart img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Introduction to Infrastructure as a Service (IaaS)</h1>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>What is IaaS?</h2>
+            <p>Infrastructure as a Service (IaaS) is a cloud computing model that provides virtualized computing resources over the internet. It enables organizations to rent virtualized hardware resources such as servers, storage, and networking, eliminating the need for physical hardware investments and allowing for scalability and flexibility.</p>
+            
+        </div>
+        <div class="section">
+            <h2>Theoretical Concepts</h2>
+            <center><img src="https://webimages.mongodb.com/_com_assets/cms/l1nldf38un1vw8nnz-image6.png?auto=format%252Ccompress.jpg" alt="IaaS Overview"></center>
+            <p>IaaS offers a range of theoretical and practical benefits including:</p>
+            <ul>
+                <li><strong>Virtualization:</strong> Creates virtual instances of physical hardware to improve efficiency and resource utilization.</li>
+                <li><strong>On-Demand Resources:</strong> Allows users to access and manage resources as needed without maintaining physical hardware.</li>
+                <li><strong>Scalability:</strong> Easily scales resources up or down based on demand.</li>
+                <li><strong>Cost Efficiency:</strong> Reduces capital expenditure by shifting to a pay-as-you-go model.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Usage of IaaS</h2>
+            <div class="diagram">
+                <img src="data:image/png;base64,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" alt="IaaS Usage">
+            </div>
+            <p>IaaS is used for various purposes including:</p>
+            <ul>
+                <li><strong>Hosting Websites:</strong> Provides the infrastructure to host and manage websites and web applications.</li>
+                <li><strong>Data Storage:</strong> Offers scalable storage solutions for large volumes of data.</li>
+                <li><strong>Development and Testing:</strong> Enables developers to create and test applications without worrying about infrastructure.</li>
+                <li><strong>Disaster Recovery:</strong> Provides backup and recovery solutions to ensure business continuity.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Flowchart of IaaS</h2>
+            <div class="flowchart">
+                <img src="https://media.licdn.com/dms/image/D4D22AQF16m7dp8AFaQ/feedshare-shrink_2048_1536/0/1701268891991?e=2147483647&v=beta&t=urlgOAVXEltz9MnPC9BV7dcYxdmE_THmKtW1MYkXiFI" alt="IaaS Flowchart">
+            </div>
+            <p>The flowchart illustrates the typical components and interactions in an IaaS environment, including virtual machines, storage, and networking.</p>
+        </div>
+        <div class="section">
+            <h2>Case Study: E-Commerce Platform</h2>
+            <img src="https://example.com/iaas-case-study.jpg" alt="IaaS Case Study">
+            <p>Consider an e-commerce platform that leverages IaaS to handle fluctuating traffic. By using IaaS, the platform can scale its computing resources based on demand during peak shopping seasons, ensuring high performance and availability while controlling costs.</p>
+        </div>
+        <div class="section tooltip">
+            <h2>Interactive Example</h2>
+            <button onclick="showAlert()">Click me to learn more</button>
+            <span class="tooltiptext">Click to interact!</span>
+        </div>
+    </div>
+    <script>
+        function showAlert() {
+            alert("IaaS allows businesses to rent virtualized hardware resources, providing flexibility, scalability, and cost-efficiency.");
+        }
+    </script>
+</body>
+</html>

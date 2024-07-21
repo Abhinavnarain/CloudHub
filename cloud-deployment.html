@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Deployment Models</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #0044cc;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            animation: fadeIn 2s ease-in-out;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 1em;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #002a80;
+        }
+        section {
+            padding: 6em 1em 2em;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 80px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        h2 {
+            color: #0044cc;
+            font-size: 1.8em;
+            margin-bottom: 0.5em;
+        }
+        h3 {
+            color: #0044cc;
+            font-size: 1.4em;
+            margin-top: 1em;
+        }
+        p {
+            color: #333;
+            line-height: 1.6;
+        }
+        ul {
+            padding-left: 1.5em;
+        }
+        ul li {
+            margin-bottom: 0.5em;
+        }
+        ul li strong {
+            color: #0044cc;
+        }
+        .cloud-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1em;
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        
+       
+    </style>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+</head>
+<body oncontextmenu="return false;">
+    <header>
+        <h1>Cloud Deployment Models</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#topics">Topics</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="cloud-services.html">Cloud-services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Overview</h2>
+        <p>Cloud deployment models represent specific cloud environments, primarily distinguished by ownership, size, and access. The main deployment models include Public Cloud, Private Cloud, Hybrid Cloud, and Community Cloud.</p>
+        
+        <h3>Public Cloud</h3>
+        <img src="public-cloud.jpg" alt="Public Cloud" class="cloud-image">
+        <p>Public clouds are owned and operated by third-party cloud service providers, which deliver their computing resources like servers and storage over the internet. Examples include Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP).</p>
+
+        <h3>Private Cloud</h3>
+        <img src="private-cloud.jpg" alt="Private Cloud" class="cloud-image">
+        <p>Private clouds are cloud environments dedicated to a single organization. They can be hosted on-site or by a third-party service provider. This model offers more control over resources and security.</p>
+
+        <h3>Hybrid Cloud</h3>
+        <img src="hybrid-cloud.jpg" alt="Hybrid Cloud" class="cloud-image">
+        <p>Hybrid clouds combine public and private clouds, allowing data and applications to be shared between them. This model provides greater flexibility and more deployment options.</p>
+
+        <h3>Community Cloud</h3>
+        <img src="community-cloud.jpg" alt="Community Cloud" class="cloud-image">
+        <p>Community clouds are shared among several organizations with common concerns such as security, compliance, or jurisdiction. These clouds can be managed internally or by a third-party.</p>
+        
+        <h3>Benefits and Challenges</h3>
+        <ul>
+            <li><strong>Public Cloud:</strong> Cost-effective, scalable; but less control over security.</li>
+            <li><strong>Private Cloud:</strong> High security and control; but more expensive and complex to manage.</li>
+            <li><strong>Hybrid Cloud:</strong> Flexible and scalable; but requires careful management of multiple environments.</li>
+            <li><strong>Community Cloud:</strong> Cost-effective for shared resources; but may have limited availability.</li>
+        </ul>
+    </section>
+
+  
+</body>
+</html>
